@@ -2,7 +2,7 @@
 
 set -e
 
-BEANSTALKD_VERSION="1.10"
+BEANSTALKD_VERSION="1.11"
 
 
 
