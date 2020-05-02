@@ -1,0 +1,14 @@
+language: minimal
+
+os:   linux
+dist: bionic
+
+services:
+  - docker
+
+script:
+  - docker build .
+
+notifications:
+  email:
+    - sid@sidroberts.co.uk
