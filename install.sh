@@ -2,7 +2,7 @@
 
 set -e
 
-BEANSTALKD_VERSION="1.11"
+BEANSTALKD_VERSION="1.12"
 
 
 
@@ -21,12 +21,6 @@ wget --quiet "https://github.com/beanstalkd/beanstalkd/archive/v${BEANSTALKD_VER
 tar -xzf "v${BEANSTALKD_VERSION}.tar.gz"
 
 cd "beanstalkd-${BEANSTALKD_VERSION}/"
-
-
-
-# Fix file path reference
-
-sed -i "s|#include <sys/fcntl.h>|#include <fcntl.h>|g" sd-daemon.c
 
 
 
