@@ -8,7 +8,7 @@ BEANSTALKD_VERSION="1.12"
 
 # Install build dependencies
 
-apk add --no-cache --virtual .build-deps gcc make musl-dev
+apk add --no-cache --virtual .build-deps gcc make musl-dev pkgconfig
 
 
 
