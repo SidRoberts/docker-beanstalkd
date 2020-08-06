@@ -28,6 +28,8 @@ cd "beanstalkd-${BEANSTALKD_VERSION}/"
 
 make
 
+make check -j1 VERBOSE=1
+
 make PREFIX=/usr install
 
 mkdir /var/lib/beanstalkd/
