@@ -1,4 +1,4 @@
-# [`sidroberts/beanstalkd`](https://hub.docker.com/repository/docker/sidroberts/beanstalkd)
+# [`sidroberts/beanstalkd`](https://hub.docker.com/r/sidroberts/beanstalkd)
 
 Docker image for [Beanstalkd](https://beanstalkd.github.io/).
 
