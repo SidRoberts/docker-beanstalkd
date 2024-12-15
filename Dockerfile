@@ -1,4 +1,4 @@
-FROM alpine as builder
+FROM alpine AS builder
 
 ENV BEANSTALKD_VERSION=1.13
 
