@@ -27,20 +27,13 @@ jobs:
         run: |
           echo "version=$(echo ${GITHUB_REF#refs/tags/v})" >> "$GITHUB_ENV"
 
-      - name: Build and push Docker image (version tag)
+      - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: sidroberts/beanstalkd:${{ env.version }}
-
-      - name: Build and push Docker image (latest)
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: sidroberts/beanstalkd:latest
+          tags: |
+            sidroberts/beanstalkd:${{ env.version }}
+            sidroberts/beanstalkd:latest
