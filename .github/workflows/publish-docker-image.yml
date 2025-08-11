@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -28,7 +28,7 @@ jobs:
           echo "version=$(echo ${GITHUB_REF#refs/tags/v})" >> "$GITHUB_ENV"
 
       - name: Build and push Docker image (version tag)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
@@ -37,7 +37,7 @@ jobs:
           tags: sidroberts/beanstalkd:${{ env.version }}
 
       - name: Build and push Docker image (latest)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
